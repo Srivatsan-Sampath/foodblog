@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cusines",
+  "info": {
+    "singularName": "cusine",
+    "pluralName": "cusines",
+    "displayName": "cusine"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "restaurants": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::restaurant.restaurant",
+      "mappedBy": "cusines"
+    }
+  }
+}
